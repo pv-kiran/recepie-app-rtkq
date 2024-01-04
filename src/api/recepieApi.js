@@ -7,10 +7,13 @@ export const recepieApi = createApi({
   }),
   endpoints: (builder) => ({
     getRecepies: builder.query({
+      query: () => `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=9`,
+    }),
+    getVegRecepies: builder.query({
       query: () =>
-        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=10&tags=vegetarian`,
+        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=9&tags=vegetarian`,
     }),
   }),
 });
 
-export const { useGetRecepiesQuery } = recepieApi;
+export const { useGetRecepiesQuery, useGetVegRecepiesQuery } = recepieApi;

@@ -4,3 +4,379 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+:root {
+   --shadowBox: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   --color-primary: #F48E28;
+   --color-secondary: #F5DDC4;
+   --color-gray: rgb(139, 135, 135)
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  width:5rem;
+  height: 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 20rem;
+}
+
+nav ul li {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  font-weight: 300;
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 14rem;
+  border-radius: .4rem;
+  box-shadow: var(--shadowBox);
+  padding: .75rem;
+}
+
+.search-container input[type="text"] {
+  outline: 0;
+  border: 0;
+  border-right: 1px black solid;
+  width: 8rem;
+}
+
+
+.hero-section {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 86%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.left-area {
+  flex-basis: 50%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+.right-area {
+  flex-basis: 50%;
+  padding: 1rem 0;
+}
+
+
+.hero-btn  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .3rem .5rem;
+  width: 11rem;
+  border-radius: 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  box-shadow: var(--shadowBox);
+  margin: 1rem 0;
+}
+
+.hero-btn img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+
+.hero-title {
+  font-size: 3rem;
+  width: 80%;
+  font-weight: 500;
+}
+
+.hero-title span {
+  color: var(--color-primary);
+}
+
+.hero-content {
+  font-size: 1.2rem;
+  color: var(--color-gray);
+  margin: 1rem 0;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+}
+
+.btn-order , .btn-cart {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadowBox);
+  margin-right: 1rem;
+  font-size: .75rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.btn-cart {
+  padding: .5rem .6rem;
+  border-radius: 1rem;
+  font-weight: 400;
+}
+
+.btn-play {
+  box-shadow: var(--shadowBox);
+  padding: .75rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container span {
+  font-size: 1.2rem;
+  color: var(--color-gray);
+}
+
+.recipie-card {
+  box-shadow: var(--shadowBox);
+  border-radius: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.hero-recipie-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  padding: 0 .5rem;
+}
+
+.recipie-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  filter: brightness(-100);
+  opacity: 1.5;
+  /* border-radius: .5rem; */
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.card-conent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+.card-conent h3 , .card-conent h2 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+.card-conent h2 {
+  color: black;
+}
+
+.view-btn {
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.section-info {
+  width: 85%;
+  margin: 2rem auto;
+  box-shadow: var(--shadowBox);
+  border-radius: .5rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 1rem;
+}
+
+.section-info > :nth-child(1) , .section-info> :nth-child(2) {
+  border-right: 1px var(--color-gray) dotted;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding : 2rem
+}
+
+.info-card h2 , .info-card h3 {
+  color: var(--color-gray);
+}
+.info-card h2  {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black;
+}
+.info-card h3 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.icon-info {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.section-title {
+  width: 85%;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.section-title h3 {
+  color: var(--color-primary);
+  font-size:1.4rem;
+  font-weight: 400;
+}
+
+.section-title h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.popular-section {
+  width: 85%;
+  margin: 1rem auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.service-section , .section-workflow {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+}
+
+
+.service-section> :nth-child(odd) {
+  border: 1px gray dotted;
+}
+
+.service-section> :nth-child(even) {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+}
+
+.service-card button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+}
+
+.service-icon {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.service-card h2 , .work-card h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.service-card p , .work-card p {
+  color: var(--color-gray);
+  text-align: center;
+  font-weight: 100;
+}
+
+.section-workflow {
+  position: relative;;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.work-card:nth-child(even) > h2 {
+  order: 1;
+  color: var(--color-gray);
+}
+.work-card:nth-child(even)> p {
+  order: 2;
+  color: black;
+}
+.work-card:nth-child(even)> img {
+  order: 3;
+}
+
+.work-card img{
+  width: 80%;
+}
+
+.left-line , .right-line {
+  position: absolute;
+}
+
+.left-line {
+  width: 28%;
+  height: 55%;
+  left: 20%;
+  top: 10%;
+}
+
+.right-line {
+  width: 30%;
+  right: 20%;
+  top: 10%;
+}

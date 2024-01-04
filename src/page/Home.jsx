@@ -1,7 +1,13 @@
-import Test from "../components/Test";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 
 function Home() {
-  return <Test></Test>;
+  return (
+    <>
+      <Navbar></Navbar>
+      <Hero></Hero>
+    </>
+  );
 }
 
 export default Home;
