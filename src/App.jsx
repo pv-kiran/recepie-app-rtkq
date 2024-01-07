@@ -4,10 +4,6 @@ import { useGetRecepiesQuery } from "./api/recepieApi";
 import Home from "./page/Home";
 import { useEffect } from "react";
 import { saveRecipies } from "./features/recepieSlice";
-import Info from "./components/Info";
-import Popular from "./components/Popular";
-import Services from "./components/Services";
-import Workflow from "./components/Workflow";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,10 +20,6 @@ function App() {
   ) : (
     <>
       <Home></Home>
-      <Info></Info>
-      <Popular></Popular>
-      <Services></Services>
-      <Workflow></Workflow>
     </>
   );
 }

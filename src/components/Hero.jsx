@@ -13,8 +13,9 @@ function Hero() {
           Unleash Culinary Magic with Our <span>Recipe App</span>
         </h2>
         <p className="hero-content">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore enim
-          accusamus nobis dicta illo. Rerum eum porro saepe ratione animi!
+          Explore culinary wonders with our app! Effortless recipes,
+          personalized recommendations, and a foodie community. Download now for
+          a flavorful journey!
         </p>
         <div className="btn-container">
           <button className="btn-order">View Recepies</button>
