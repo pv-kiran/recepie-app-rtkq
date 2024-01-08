@@ -7,11 +7,23 @@ export const recepieApi = createApi({
   }),
   endpoints: (builder) => ({
     getRecepies: builder.query({
-      query: () => `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=9`,
+      query: () => `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6`,
     }),
     getVegRecepies: builder.query({
       query: () =>
-        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=9&tags=vegetarian`,
+        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=vegetarian`,
+    }),
+    getSpanishRecepies: builder.query({
+      query: () =>
+        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=Spanish`,
+    }),
+    getKetoRecepies: builder.query({
+      query: () =>
+        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=ketogenic`,
+    }),
+    getBreakfastRecepies: builder.query({
+      query: () =>
+        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=breakfast`,
     }),
     getRecepieById: builder.query({
       query: (id) => {
@@ -25,4 +37,7 @@ export const {
   useGetRecepiesQuery,
   useGetVegRecepiesQuery,
   useGetRecepieByIdQuery,
+  useGetBreakfastRecepiesQuery,
+  useGetSpanishRecepiesQuery,
+  useGetKetoRecepiesQuery,
 } = recepieApi;

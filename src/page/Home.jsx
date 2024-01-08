@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { useGetRecepiesQuery } from "../api/recepieApi";
 import { useEffect } from "react";
 import { saveRecipies } from "../features/recepieSlice";
+import Loading from "../components/shared/Loading";
 
 function Home() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function Home() {
     }
   }, [isSuccess]);
   return isLoading ? (
-    <h1>Loading ....!!</h1>
+    <Loading></Loading>
   ) : (
     <>
       <Navbar></Navbar>

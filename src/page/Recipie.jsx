@@ -8,6 +8,7 @@ import { useGetRecepieByIdQuery } from "../api/recepieApi";
 import { useEffect } from "react";
 import { saveRecipie } from "../features/recepieSlice";
 import Footer from "./../components/Footer";
+import Loading from "../components/shared/Loading";
 
 function Recipie() {
   const { id } = useParams();
@@ -16,9 +17,11 @@ function Recipie() {
   useEffect(() => {
     dispatch(saveRecipie(recipie));
   }, [isSuccess]);
+
   if (isLoading) {
-    return <h1>Loading ...!!</h1>;
+    return <Loading />;
   }
+
   if (isSuccess) {
     return (
       <>

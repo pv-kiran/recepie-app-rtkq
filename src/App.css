@@ -34,6 +34,7 @@ a {
 .logo {
   width:5rem;
   height: 3rem;
+  cursor: pointer;
 }
 
 nav {
@@ -675,4 +676,15 @@ input[type='checkbox'] {
   background-color: #fff;
   accent-color: var(--color-primary);
   padding: .5rem;
+}
+
+.section-receipies {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 3rem;
+}
+.keto {
+  margin-bottom: 5rem;
 }
