@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   reciepies: [],
+  myRecipie: {},
 };
 
 const recepieSlice = createSlice({
@@ -11,8 +12,11 @@ const recepieSlice = createSlice({
     saveRecipies: (state, action) => {
       state.reciepies = action.payload;
     },
+    saveRecipie: (state, action) => {
+      state.myRecipie = action.payload;
+    },
   },
 });
 
 export default recepieSlice.reducer;
-export const { saveRecipies } = recepieSlice.actions;
+export const { saveRecipies, saveRecipie } = recepieSlice.actions;

@@ -628,6 +628,11 @@ footer {
   font-weight: 400;
 }
 
+.section-steps {
+  width: 90%;
+  margin: auto;
+}
+
 
 .receipie-image img {
   width: 100%;
