@@ -2,7 +2,15 @@
 import { FaDollarSign } from "react-icons/fa";
 import { IoArrowRedo } from "react-icons/io5";
 import { BiSolidLike } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
+
 function RecepieCard({ recepie, popular }) {
+  const navigate = useNavigate();
+
+  const handleNavigate = (id) => {
+    navigate(`/recipie/${id}`);
+  };
+
   return (
     <article className="recipie-card">
       <div>
@@ -22,7 +30,13 @@ function RecepieCard({ recepie, popular }) {
       </div>
       {popular && (
         <div className="card-conent">
-          <button className="btn-cart">View Details</button>
+          <button
+            className="btn-cart"
+            onClick={() => {
+              handleNavigate(recepie?.id);
+            }}>
+            View Details
+          </button>
           <h3
             style={{
               display: "flex",
@@ -35,7 +49,13 @@ function RecepieCard({ recepie, popular }) {
         </div>
       )}
 
-      {!popular && <IoArrowRedo className="view-btn"></IoArrowRedo>}
+      {!popular && (
+        <IoArrowRedo
+          className="view-btn"
+          onClick={() => {
+            handleNavigate(recepie?.id);
+          }}></IoArrowRedo>
+      )}
     </article>
   );
 }
