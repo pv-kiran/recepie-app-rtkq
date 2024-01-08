@@ -1,25 +1,15 @@
-import { useDispatch } from "react-redux";
 import "./App.css";
-import { useGetRecepiesQuery } from "./api/recepieApi";
 import Home from "./page/Home";
-import { useEffect } from "react";
-import { saveRecipies } from "./features/recepieSlice";
+import { Route, Routes } from "react-router-dom";
+import Recipie from "./page/Recipie";
 
 function App() {
-  const dispatch = useDispatch();
-  const { isLoading, data, isSuccess } = useGetRecepiesQuery();
-  useEffect(() => {
-    if (isSuccess) {
-      const { recipes } = data;
-      dispatch(saveRecipies(recipes));
-    }
-  }, [isSuccess]);
-
-  return isLoading ? (
-    <h2>Loading</h2>
-  ) : (
+  return (
     <>
-      <Home></Home>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipie/:id" element={<Recipie />} />
+      </Routes>
     </>
   );
 }

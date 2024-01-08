@@ -13,7 +13,16 @@ export const recepieApi = createApi({
       query: () =>
         `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=9&tags=vegetarian`,
     }),
+    getRecepieById: builder.query({
+      query: (id) => {
+        return `${id}/information?apiKey=2704a568e40946f88e2ecade0d3a6b26`;
+      },
+    }),
   }),
 });
 
-export const { useGetRecepiesQuery, useGetVegRecepiesQuery } = recepieApi;
+export const {
+  useGetRecepiesQuery,
+  useGetVegRecepiesQuery,
+  useGetRecepieByIdQuery,
+} = recepieApi;

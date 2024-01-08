@@ -7,9 +7,23 @@ import Services from "../components/Services";
 import Testimonial from "../components/Testimonial";
 import Workflow from "../components/Workflow";
 import Footer from "../components/Footer";
+import { useDispatch } from "react-redux";
+import { useGetRecepiesQuery } from "../api/recepieApi";
+import { useEffect } from "react";
+import { saveRecipies } from "../features/recepieSlice";
 
 function Home() {
-  return (
+  const dispatch = useDispatch();
+  const { isLoading, data, isSuccess } = useGetRecepiesQuery();
+  useEffect(() => {
+    if (isSuccess) {
+      const { recipes } = data;
+      dispatch(saveRecipies(recipes));
+    }
+  }, [isSuccess]);
+  return isLoading ? (
+    <h1>Loading ....!!</h1>
+  ) : (
     <>
       <Navbar></Navbar>
       <Hero></Hero>
