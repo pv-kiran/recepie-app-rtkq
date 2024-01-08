@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { useGetRecepieByIdQuery } from "../api/recepieApi";
 import { useEffect } from "react";
 import { saveRecipie } from "../features/recepieSlice";
+import Footer from "./../components/Footer";
 
 function Recipie() {
   const { id } = useParams();
@@ -25,6 +26,7 @@ function Recipie() {
         <RecepieInfo></RecepieInfo>
         <Ingredients></Ingredients>
         <CookingStep></CookingStep>
+        <Footer></Footer>
       </>
     );
   }
