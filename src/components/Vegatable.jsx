@@ -1,5 +1,5 @@
 import { useGetVegRecepiesQuery } from "../api/recepieApi";
-import RecepieCard from "./shared/RecepieCArd";
+import RecepieCard from "./shared/RecepieCard";
 import ShimmerLoading from "./shared/ShimmerLoading";
 import Title from "./Title";
 

@@ -1,6 +1,6 @@
 import { useGetKetoRecepiesQuery } from "../api/recepieApi";
 import Title from "./Title";
-import RecepieCard from "./shared/RecepieCArd";
+import RecepieCard from "./shared/RecepieCard";
 import ShimmerLoading from "./shared/ShimmerLoading";
 
 function Ketogenic() {
