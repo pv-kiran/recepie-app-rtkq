@@ -1,8 +1,36 @@
-# React + Vite
+# Recipe App with RTK Query
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple recipe app built using React and learning RTK Query for efficient data fetching. Explore a variety of recipes and get detailed information about each dish.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🍲 View a collection of diverse recipes.
+- 📚 Get detailed information about each recipe.
+- 🔍 Efficient data fetching with RTK Query.
+- 🚀 Built with React for a dynamic user interface.
+
+## Technologies Used
+
+- React
+- Redux Toolkit Query (RTK Query)
+
+## Getting Started
+
+To run this app locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/pv-kiran/recepie-app-rtkq.git
+
+```bash
+cd recepie-app-rtkq
+
+```bash
+npm install
+
+```bash
+npm run dev
+
+Visit http://localhost:5173 in your browser to view the app.
+
