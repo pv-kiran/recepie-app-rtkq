@@ -7,27 +7,33 @@ export const recepieApi = createApi({
   }),
   endpoints: (builder) => ({
     getRecepies: builder.query({
-      query: () => `/random?apiKey=${import.meta.VITE_API_KEY}`,
+      query: () => `/random?apiKey=${import.meta.env.VITE_API_KEY}`,
     }),
     getVegRecepies: builder.query({
       query: () =>
-        `/random?apiKey=${import.meta.VITE_API_KEY}&number=6&tags=vegetarian`,
+        `/random?apiKey=${
+          import.meta.env.VITE_API_KEY
+        }&number=6&tags=vegetarian`,
     }),
     getSpanishRecepies: builder.query({
       query: () =>
-        `/random?apiKey=${import.meta.VITE_API_KEY}&number=6&tags=Spanish`,
+        `/random?apiKey=${import.meta.env.VITE_API_KEY}&number=6&tags=Spanish`,
     }),
     getKetoRecepies: builder.query({
       query: () =>
-        `/random?apiKey=${import.meta.VITE_API_KEY}&number=6&tags=ketogenic`,
+        `/random?apiKey=${
+          import.meta.env.VITE_API_KEY
+        }&number=6&tags=ketogenic`,
     }),
     getBreakfastRecepies: builder.query({
       query: () =>
-        `/random?apiKey=${import.meta.VITE_API_KEY}&number=6&tags=breakfast`,
+        `/random?apiKey=${
+          import.meta.env.VITE_API_KEY
+        }&number=6&tags=breakfast`,
     }),
     getRecepieById: builder.query({
       query: (id) => {
-        return `${id}/information?apiKey=${import.meta.VITE_API_KEY}`;
+        return `${id}/information?apiKey=${import.meta.env.VITE_API_KEY}`;
       },
     }),
   }),
