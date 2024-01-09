@@ -688,3 +688,7 @@ input[type='checkbox'] {
 .keto {
   margin-bottom: 5rem;
 }
+.shimmer-loader {
+  width: 85%;
+  margin: auto;
+}

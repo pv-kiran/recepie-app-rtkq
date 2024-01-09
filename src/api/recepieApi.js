@@ -7,27 +7,27 @@ export const recepieApi = createApi({
   }),
   endpoints: (builder) => ({
     getRecepies: builder.query({
-      query: () => `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6`,
+      query: () => `/random?apiKey=cc0c5c99b46341afba28ebfb9a233646&number=6`,
     }),
     getVegRecepies: builder.query({
       query: () =>
-        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=vegetarian`,
+        `/random?apiKey=cc0c5c99b46341afba28ebfb9a233646&number=6&tags=vegetarian`,
     }),
     getSpanishRecepies: builder.query({
       query: () =>
-        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=Spanish`,
+        `/random?apiKey=cc0c5c99b46341afba28ebfb9a233646&number=6&tags=Spanish`,
     }),
     getKetoRecepies: builder.query({
       query: () =>
-        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=ketogenic`,
+        `/random?apiKey=cc0c5c99b46341afba28ebfb9a233646&number=6&tags=ketogenic`,
     }),
     getBreakfastRecepies: builder.query({
       query: () =>
-        `/random?apiKey=2704a568e40946f88e2ecade0d3a6b26&number=6&tags=breakfast`,
+        `/random?apiKey=cc0c5c99b46341afba28ebfb9a233646&number=6&tags=breakfast`,
     }),
     getRecepieById: builder.query({
       query: (id) => {
-        return `${id}/information?apiKey=2704a568e40946f88e2ecade0d3a6b26`;
+        return `${id}/information?apiKey=cc0c5c99b46341afba28ebfb9a233646`;
       },
     }),
   }),

@@ -1,24 +1,29 @@
 import { useGetBreakfastRecepiesQuery } from "../api/recepieApi";
 import Title from "./Title";
 import RecepieCard from "./shared/RecepieCArd";
+import ShimmerLoading from "./shared/ShimmerLoading";
 
 function Breakfast() {
-  const { data } = useGetBreakfastRecepiesQuery();
+  const { isLoading, data } = useGetBreakfastRecepiesQuery();
   return (
     <>
       <Title
         title={"Breakfast Bonanza"}
         subtitle={"Start Your Day with Deliciousness"}></Title>
-      <section className="section-receipies">
-        {data?.recipes?.map((item, index) => {
-          return (
-            <RecepieCard
-              key={index}
-              recepie={item}
-              popular={true}></RecepieCard>
-          );
-        })}
-      </section>
+      {isLoading ? (
+        <ShimmerLoading />
+      ) : (
+        <section className="section-receipies">
+          {data?.recipes?.map((item, index) => {
+            return (
+              <RecepieCard
+                key={index}
+                recepie={item}
+                popular={true}></RecepieCard>
+            );
+          })}
+        </section>
+      )}
     </>
   );
 }
