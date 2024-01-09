@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import RecepieCard from "./shared/RecepieCArd";
+import RecepieCard from "./shared/RecepieCard";
 
 function HeroRecepies() {
   const { reciepies } = useSelector((state) => state?.recepie);
