@@ -3,6 +3,8 @@ import { FaDollarSign } from "react-icons/fa";
 import { IoArrowRedo } from "react-icons/io5";
 import { BiSolidLike } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
+import { Image, Shimmer } from "react-shimmer";
+import { getDimensions } from "../../functions/dimension";
 
 function RecepieCard({ recepie, popular }) {
   const navigate = useNavigate();
@@ -11,10 +13,16 @@ function RecepieCard({ recepie, popular }) {
     navigate(`/recipie/${id}`);
   };
 
+  const { width, height } = getDimensions(popular);
+
   return (
     <article className="recipie-card">
       <div>
-        <img src={recepie?.image} alt="recepie image" />
+        <Image
+          src={recepie?.image}
+          fallback={<Shimmer width={width} height={height} />}
+        />
+        {/* <img src={recepie?.image} alt="recepie image" /> */}
       </div>
       <div className="card-conent">
         <h3>{recepie?.title.split(" ")?.slice(0, 2)?.join(" ")}</h3>
