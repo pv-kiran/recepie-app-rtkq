@@ -7,7 +7,7 @@ export const recepieApi = createApi({
   }),
   endpoints: (builder) => ({
     getRecepies: builder.query({
-      query: () => `/random?apiKey=${import.meta.env.VITE_API_KEY}`,
+      query: () => `/random?apiKey=${import.meta.env.VITE_API_KEY}&number=6`,
     }),
     getVegRecepies: builder.query({
       query: () =>

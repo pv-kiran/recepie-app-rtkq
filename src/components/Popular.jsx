@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import RecepieCard from "./shared/RecepieCArd";
 import Title from "./Title";
+import ViewButton from "./shared/ViewButton";
 
 function Popular() {
   const { reciepies } = useSelector((state) => state?.recepie);
@@ -17,6 +18,9 @@ function Popular() {
           );
         })}
       </section>
+      <div className="viewbtn-container">
+        <ViewButton text={"View All"} />
+      </div>
     </>
   );
 }

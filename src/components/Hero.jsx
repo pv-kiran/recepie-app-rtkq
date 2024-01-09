@@ -1,9 +1,8 @@
 import heroBike from "../assets/hero-bike.png";
 import { FaPlay } from "react-icons/fa";
 import HeroRecepies from "./HeroRecepies";
-import { useNavigate } from "react-router-dom";
+import ViewButton from "./shared/ViewButton";
 function Hero() {
-  const navigate = useNavigate();
   return (
     <section className="hero-section">
       <div className="left-area">
@@ -20,13 +19,7 @@ function Hero() {
           a flavorful journey!
         </p>
         <div className="btn-container">
-          <button
-            className="btn-order"
-            onClick={() => {
-              navigate(`/recipie/all`);
-            }}>
-            View Recepies
-          </button>
+          <ViewButton text={"View Recipes"} />
           <button className="btn-play">
             <FaPlay size={20} color="#F48E28"></FaPlay>
           </button>
