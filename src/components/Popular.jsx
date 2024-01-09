@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import RecepieCard from "./shared/RecepieCArd";
+import RecepieCard from "./shared/RecepieCard";
 import Title from "./Title";
 import ViewButton from "./shared/ViewButton";
 
