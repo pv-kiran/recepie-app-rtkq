@@ -23,13 +23,13 @@ To run this app locally, follow these steps:
 ```bash
 git clone https://github.com/pv-kiran/recepie-app-rtkq.git
 
-```bash
+
 cd recepie-app-rtkq
 
-```bash
+
 npm install
 
-```bash
+
 npm run dev
 
 Visit http://localhost:5173 in your browser to view the app.
