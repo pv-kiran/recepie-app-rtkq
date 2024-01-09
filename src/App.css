@@ -48,7 +48,7 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-basis: 20rem;
+  flex-basis: 24rem;
 }
 
 nav ul li  {
@@ -97,7 +97,8 @@ nav ul li  {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 1rem 0;
+  /* padding: .5rem 0; */
+  padding-bottom: .75rem;
 }
 
 .right-area {
